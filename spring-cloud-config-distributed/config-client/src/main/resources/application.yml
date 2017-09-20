@@ -1,0 +1,22 @@
+server:
+  port: 8887
+
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+#      uri: http://localhost:8888/
+      label: master
+      profile: dev
+      discovery:
+        enabled: true            # 从配置中心读取文件
+        serviceId: config-server # 配置中心的serviceId，即服务名
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka/
+
+
+
