@@ -9,4 +9,5 @@
 /bin/
 /log/
 *.iml
-*/target
+target
+*.class
